@@ -1,0 +1,21 @@
+.footer {
+   padding: 10px 0;
+   position: fixed;
+   background: #625e5f46;
+   width: 100%;
+   height: auto;
+   bottom: 0;
+   .footer__body {
+      display: flex;
+      justify-content: center;
+      p {
+         color: rgba(255, 255, 255, 0.678);
+         font-size: 18px;
+         margin-bottom: 0;
+         font-weight: 100;
+         span {
+            text-transform: uppercase;
+         }
+      }
+   }
+}

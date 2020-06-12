@@ -1,0 +1,33 @@
+.header {
+  background: transparent;
+  justify-content: center;
+  display: flex;
+  .header__body {
+    max-width: 1140px;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 15px;
+    margin: 0 auto;
+    .header__btn {
+      a {
+        font-style: none;
+        font-size: 25px;
+        color: #fff;
+        position: relative;
+        &::after {
+          content: "";
+          position: absolute;
+          width: 110%;
+          height: 2px;
+          bottom: -35%;
+          right: -4px;
+          background: #fff;
+          pointer-events: none;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,26 @@
+.attention {
+   background: url(/img/bg2.png) no-repeat center/cover;
+   width: 100%;
+   height: 100vh;
+   .attention__body {
+      @include body;
+      .attention__title {
+         @include title;
+      }
+      .attention__text {
+         max-width: 620px;
+         width: 100%;
+         font-size: 19px;
+         color: rgb(255, 255, 255);
+         line-height: 1.5;
+         text-align: left;
+      }
+      .atention__choice {
+         display: flex;
+         .atention__btn {
+            @include btn;
+            padding: 15px 125px;
+         }
+      }
+   }
+}

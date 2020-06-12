@@ -1,0 +1,22 @@
+.start {
+   background: url(/img/bg1.png) no-repeat center/cover;
+   width: 100%;
+   height: 100vh;
+   .start__body {
+      @include body;
+      h1 {
+         font-size: 36px;
+         color: #fff;
+         line-height: 1.333;
+         letter-spacing: 0.1ex;
+         span {
+            color: #fff7b2;
+            text-transform: uppercase;
+         }
+      }
+      .start__btn {
+         @include btn;
+         max-width: 375px;
+      }
+   }
+}
