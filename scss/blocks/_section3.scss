@@ -12,6 +12,9 @@
          font-size: 16px;
          color: #fff;
          font-style: italic;
+         @media screen and (max-width: 576px) {
+            font-size: 15px;
+         }
       }
       .form {
          max-width: 430px;
@@ -22,13 +25,24 @@
             align-items: end;
             margin: 25px 0 55px;
             vertical-align: middle;
+            user-select: none;
+            @media screen and (max-width: 576px) {
+               margin: 15px 20px 35px;
+            }
             .form__label {
                padding-left: 45px;
                font-size: 20px;
+               margin-bottom: 0;
+               @media screen and (max-width: 576px) {
+                  font-size: 18px;
+               }
             }
             .option {
                display: block;
                margin-top: 20px;
+               @media screen and (max-width: 576px) {
+                  margin-top: 15px;
+               }
                .form__input {
                   appearance: none;
                   -webkit-appearance: none;
@@ -46,10 +60,15 @@
                   margin-left: -45px;
                   border: 1px solid #fff;
                   border-radius: 5px;
+                  @media screen and (max-width: 576px) {
+                     width: 25px;
+                     height: 25px;
+                     margin-top: -2px;
+                  }
                }
             }
          }
-         .form__btn {
+         .button {
             @include btn;
             padding: 15px 110px;
             margin: 0 auto;

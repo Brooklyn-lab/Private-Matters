@@ -5,14 +5,20 @@
    width: 100%;
    height: auto;
    bottom: 0;
+   @media screen and (max-width: 576px) {
+      background: transparent;
+   }
    .footer__body {
       display: flex;
       justify-content: center;
       p {
-         color: rgba(255, 255, 255, 0.678);
+         color: #fff;
          font-size: 18px;
          margin-bottom: 0;
          font-weight: 100;
+         @media screen and (max-width: 576px) {
+            font-size: 14px;
+         }
          span {
             text-transform: uppercase;
          }

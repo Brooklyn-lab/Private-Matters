@@ -5,11 +5,13 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Privat Matters</title>
-   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;300;0,400;1,400&display=swap"
+   <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;300;0,400;1,400;Source+Sans+Pro:wght@300&display=swap"
       rel="stylesheet">
    <link rel="stylesheet" href="./libs/bootstrap.min.css" />
    <link rel="stylesheet" href="./src/index.css" />
 </head>
+<!-- !Внести в заглавие иконку бренда -->
 
 <body>
    <header class="header">
@@ -25,11 +27,12 @@
    <section class="start">
       <div class="start__body">
          <h1>We find <span>BAD GIRLS</span> in your area that <span>WANT TO FUCK</span></h1>
-         <div class="start__btn">
-            <a href="#">Start <span>NOW</span></a>
-         </div>
+         <label class="button">
+            <input class="button-pseudo">
+            <span class="button-text">Next</span>
+         </label>
       </div>
-   </section>
+   </section> 
    <section class="attention">
       <div class="attention__body">
          <h2 class="attention__title">Attention!</h2>
@@ -38,8 +41,14 @@
             neighbors or someone you know. Do you agree to keep the identity of these women a secret?
          </p>
          <div class="atention__choice">
-            <div class="atention__btn"><a href="#">No</a></div>
-            <div class="atention__btn"><a href="#">Yes</a></div>
+            <label class="button">
+               <input class="button-pseudo">
+               <span class="button-text">No</span>
+            </label>
+            <label class="button">
+               <input class="button-pseudo">
+               <span class="button-text">Yes</span>
+            </label>
          </div>
       </div>
    </section>
@@ -49,7 +58,7 @@
          <p class="type__text">
             (Please choose up to 3 answers)
          </p>
-         <form class="form" action="#">
+         <form class="form" action="#" id="type">
             <div class="form__labels">
                <label class="form__label option">
                   <input type="checkbox" class="form__input">
@@ -69,42 +78,94 @@
                <label class="form__label option">
                   <input type="checkbox" class="form__input">
                   <span class="form__box"></span>
-                  Saxy Ass
+                  Sexy Ass
                </label>
                <label class="form__label option">
                   <input type="checkbox" class="form__input">
                   <span class="form__box"></span>
-                  Saxy Tits
+                  Sexy Tits
                </label>
             </div>
-            <div class="form__btn">
-               <a href="#">Next</a>
-            </div>
+            <label class="button">
+               <input class="button-pseudo" type="submit" form="type">
+               <span class="button-text">Next</span>
+            </label>
          </form>
       </div>
    </section>
+   <!-- !Соеденить секции с тайтлом в 3м экране и 4м -->
    <section class="color">
       <div class="color__body">
          <h2 class="color__title">What hair color do you prefer?</h2>
          <p class="color__text">
             (Please choose up to 3 answers)
          </p>
-         <div class="color__content">
-            <div>
-               <div><img src="" alt=""></div>
-               <p></p>
+         <form class="color-form" action="#" id="color">
+            <div class="color-form__labels">
+               <label class="color-form__label" for="dark">
+                  <input class="color-form__input" type="checkbox" id="dark">
+                  <div class="color-form__logo"><img src="./img/color-logo1.png" alt="Dark"></div>
+                  <span class="color-form__span">Dark</span>
+               </label>
+               <label class="color-form__label" for="blond">
+                  <input class="color-form__input" type="checkbox" id="blond">
+                  <div class="color-form__logo"><img src="./img/color-logo2.png" alt="Blond"></div>
+                  <span class="color-form__span">Blond</span>
+               </label>
+               <label class="color-form__label" for="brown">
+                  <input class="color-form__input" type="checkbox" id="brown">
+                  <div class="color-form__logo"><img src="./img/color-logo3.png" alt="Brown"></div>
+                  <span class="color-form__span">Brown</span>
+               </label>
             </div>
-            <div>
-               <div><img src="" alt=""></div>
-               <p></p>
+            <label class="button">
+               <input class="button-pseudo" type="submit" form="color">
+               <span class="button-text">Next</span>
+            </label>
+         </form>
+      </div>
+   </section>
+   <section class="popup">
+      <div class="popup__body">
+         <div class="popup__slaid">
+            <div class="popup__info">
+               <div class="popup__arrow left"></div>
+               <p class="popup__text">My sign in info</p>
+               <div class="popup__arrow right"></div>
             </div>
-            <div>
-               <div><img src="" alt=""></div>
-               <p></p>
-            </div>
+            <form class="reg-form" action="#" id="log-form">
+               <input class="reg-form__input" type="email" name="email" placeholder="E-mail">
+               <input class="reg-form__input" type="password" name="password" placeholder="Password">
+               <label class="reg-form__label option">
+                  <input type="checkbox" class="reg-form__check">
+                  <span class="reg-form__box"></span>
+                  <span class="reg-form__space"></span> By registering I agree I will receive information and promotions
+                  via email from the partners of this
+                  website.
+               </label>
+               <label class="button recede">
+                  <input class="button-pseudo" type="submit" form="log-form">
+                  <span class="button-text">Next</span>
+               </label>
+            </form>
          </div>
-         <div class="color__btn">
-            <a href="#">Next</a>
+         <div class="popup__footer">
+            <p>Free Registration ends in: <span>00:00</span></p>
+         </div>
+         <div class="popup__logo one">
+            <img src="./img/heart1.png" alt="Heart">
+         </div>
+         <div class="popup__logo two">
+            <img src="./img/heart2.png" alt="Heart">
+         </div>
+         <div class="popup__logo three">
+            <img src="./img/heart3.png" alt="Heart">
+         </div>
+         <div class="popup__logo four">
+            <img src="./img/heart4.png" alt="Heart">
+         </div>
+         <div class="popup__logo five">
+            <img src="./img/heart5.png" alt="Heart">
          </div>
       </div>
    </section>

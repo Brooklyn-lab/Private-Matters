@@ -6,20 +6,46 @@
       @include body;
       .attention__title {
          @include title;
+         @media screen and (max-width: 576px) {
+            font-size: 22px;
+         }
       }
       .attention__text {
-         max-width: 620px;
+         max-width: 555px;
          width: 100%;
-         font-size: 19px;
-         color: rgb(255, 255, 255);
+         font-size: 20px;
+         color: #fff;
          line-height: 1.5;
          text-align: left;
+         padding: 0 20px;
+         margin-bottom: 0;
       }
       .atention__choice {
          display: flex;
-         .atention__btn {
+         .button {
             @include btn;
-            padding: 15px 125px;
+            padding: 15px 115px;
+            margin-top: 40px;
+         }
+      }
+   }
+}
+
+@media screen and (max-width: 576px) {
+   .attention {
+      .attention__body {
+         .attention__text {
+            text-align: center;
+            font-size: 18px;
+         }
+         .atention__choice {
+            flex-wrap: wrap;
+            .button {
+               margin: 35px auto 0;
+               &:last-child {
+                  margin-top: 15px;
+               }
+            }
          }
       }
    }

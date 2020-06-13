@@ -1,23 +1,33 @@
+// ----------btn---------------
 @mixin btn {
+  display: block;
   max-width: 290px;
   width: 100%;
   max-height: 75px;
   height: 100%;
-  margin-top: 70px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  background: transparent;
   border: 1px solid #fff;
-  border-radius: 45px;
+  box-shadow: 0 24px 16px 1px rgba(0, 0, 0, 0.4);
+  border-radius: 35px;
   padding: 15px;
   cursor: pointer;
+  user-select: none;
   transition: 0.3s ease-in-out;
   overflow: hidden;
-  position: relative;
+  @media screen and (max-width: 576px) {
+    max-height: 55px;
+    max-width: 290px;
+  }
   &:hover {
     border: 1px solid #ff567d;
   }
   &:before {
     content: "";
     display: block;
-    background: linear-gradient(90deg, rgba(255, 42, 92, 1) 0%, rgba(255, 86, 125, 1) 75%, rgba(255, 125, 156, 1) 100%);
+    background: linear-gradient(to right, #ff295b 0%, #ff7e9c 100%);
     position: absolute;
     width: 200%;
     height: 500%;
@@ -31,18 +41,23 @@
   &:hover::before {
     transform: translate(-45%, -34%) translateZ(0);
   }
-  a {
-    text-decoration: none;
+  .button-pseudo {
+    display: none;
+  }
+  .button-text {
     font-size: 30px;
     letter-spacing: 0.1ex;
     color: #fff;
     position: relative;
-    span {
-      text-transform: uppercase;
+    top: 0;
+    display: inline;
+    transition: 0.25s ease-in;
+    transition-delay: 0.1s;
+    @media screen and (max-width: 576px) {
+      font-size: 20px;
     }
   }
 }
-
 @mixin box_shadow($level) {
   @if $level == 0 {
     box-shadow: none;
@@ -50,6 +65,7 @@
     box-shadow: 0 3px 6px rgba(255, 125, 156, 1), 0 3px 6px rgba(255, 42, 92, 1);
   }
 }
+// ----------------------------------
 @mixin body {
   height: 50em;
   display: flex;
@@ -60,10 +76,17 @@
   max-width: 720px;
   width: 100%;
   flex-direction: column;
+  @media screen and (max-width: 576px) {
+    height: 35em;
+  }
 }
 @mixin title {
   font-size: 30px;
-  color: rgb(255, 247, 178);
-  line-height: 1.6;
+  color: #fff7b2;
   margin-bottom: 40px;
+  @media screen and (max-width: 576px) {
+    max-width: 240px;
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
 }

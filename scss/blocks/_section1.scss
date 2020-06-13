@@ -9,14 +9,34 @@
          color: #fff;
          line-height: 1.333;
          letter-spacing: 0.1ex;
+         padding: 0 20px;
          span {
             color: #fff7b2;
             text-transform: uppercase;
          }
       }
-      .start__btn {
+      .button {
          @include btn;
          max-width: 375px;
+         margin-top: 70px;
+      }
+   }
+}
+@media screen and (max-width: 768px) {
+   .start {
+      background-position: 15% 50%;
+   }
+}
+@media screen and (max-width: 576px) {
+   .start {
+      background-position: 25% 50%;
+      .start__body {
+         h1 {
+            font-size: 24px;
+         }
+         .button {
+            margin-top: 30px;
+         }
       }
    }
 }
