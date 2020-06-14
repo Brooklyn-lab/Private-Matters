@@ -1,18 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Privat Matters</title>
    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;300;0,400;1,400;Source+Sans+Pro:wght@300&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400&family=Source+Sans+Pro:wght@300&display=swap"
       rel="stylesheet">
    <link rel="stylesheet" href="./libs/bootstrap.min.css" />
    <link rel="stylesheet" href="./src/index.css" />
 </head>
-<!-- !Внести в заглавие иконку бренда -->
-
 <body>
    <header class="header">
       <div class="header__body">
@@ -27,12 +24,12 @@
    <section class="start">
       <div class="start__body">
          <h1>We find <span>BAD GIRLS</span> in your area that <span>WANT TO FUCK</span></h1>
-         <label class="button">
+         <label class="button" id="start">
             <input class="button-pseudo">
             <span class="button-text">Next</span>
          </label>
       </div>
-   </section> 
+   </section>
    <section class="attention">
       <div class="attention__body">
          <h2 class="attention__title">Attention!</h2>
@@ -42,138 +39,145 @@
          </p>
          <div class="atention__choice">
             <label class="button">
-               <input class="button-pseudo">
+               <input class="button-pseudo" id="no">
                <span class="button-text">No</span>
             </label>
-            <label class="button">
+            <label class="button" id="yes">
                <input class="button-pseudo">
                <span class="button-text">Yes</span>
             </label>
          </div>
       </div>
    </section>
-   <section class="type">
-      <div class="type__body">
-         <h2 class="type__title">What type of body turns you on?</h2>
-         <p class="type__text">
-            (Please choose up to 3 answers)
-         </p>
-         <form class="form" action="#" id="type">
-            <div class="form__labels">
-               <label class="form__label option">
-                  <input type="checkbox" class="form__input">
-                  <span class="form__box"></span>
-                  Skinny
-               </label>
-               <label class="form__label option">
-                  <input type="checkbox" class="form__input">
-                  <span class="form__box"></span>
-                  Regular
-               </label>
-               <label class="form__label option">
-                  <input type="checkbox" class="form__input">
-                  <span class="form__box"></span>
-                  B.B.W
-               </label>
-               <label class="form__label option">
-                  <input type="checkbox" class="form__input">
-                  <span class="form__box"></span>
-                  Sexy Ass
-               </label>
-               <label class="form__label option">
-                  <input type="checkbox" class="form__input">
-                  <span class="form__box"></span>
-                  Sexy Tits
-               </label>
+   <form id="customer-information">
+      <section class="type">
+         <div class="type__body">
+            <div class="title">
+               <h2 class="title__header">What type of body turns you on?</h2>
+               <p class="title__text">
+                  (Please choose up to 3 answers)
+               </p>
             </div>
-            <label class="button">
-               <input class="button-pseudo" type="submit" form="type">
-               <span class="button-text">Next</span>
-            </label>
-         </form>
-      </div>
-   </section>
-   <!-- !Соеденить секции с тайтлом в 3м экране и 4м -->
-   <section class="color">
-      <div class="color__body">
-         <h2 class="color__title">What hair color do you prefer?</h2>
-         <p class="color__text">
-            (Please choose up to 3 answers)
-         </p>
-         <form class="color-form" action="#" id="color">
-            <div class="color-form__labels">
-               <label class="color-form__label" for="dark">
-                  <input class="color-form__input" type="checkbox" id="dark">
-                  <div class="color-form__logo"><img src="./img/color-logo1.png" alt="Dark"></div>
-                  <span class="color-form__span">Dark</span>
-               </label>
-               <label class="color-form__label" for="blond">
-                  <input class="color-form__input" type="checkbox" id="blond">
-                  <div class="color-form__logo"><img src="./img/color-logo2.png" alt="Blond"></div>
-                  <span class="color-form__span">Blond</span>
-               </label>
-               <label class="color-form__label" for="brown">
-                  <input class="color-form__input" type="checkbox" id="brown">
-                  <div class="color-form__logo"><img src="./img/color-logo3.png" alt="Brown"></div>
-                  <span class="color-form__span">Brown</span>
-               </label>
-            </div>
-            <label class="button">
-               <input class="button-pseudo" type="submit" form="color">
-               <span class="button-text">Next</span>
-            </label>
-         </form>
-      </div>
-   </section>
-   <section class="popup">
-      <div class="popup__body">
-         <div class="popup__slaid">
-            <div class="popup__info">
-               <div class="popup__arrow left"></div>
-               <p class="popup__text">My sign in info</p>
-               <div class="popup__arrow right"></div>
-            </div>
-            <form class="reg-form" action="#" id="log-form">
-               <input class="reg-form__input" type="email" name="email" placeholder="E-mail">
-               <input class="reg-form__input" type="password" name="password" placeholder="Password">
-               <label class="reg-form__label option">
-                  <input type="checkbox" class="reg-form__check">
-                  <span class="reg-form__box"></span>
-                  <span class="reg-form__space"></span> By registering I agree I will receive information and promotions
-                  via email from the partners of this
-                  website.
-               </label>
-               <label class="button recede">
-                  <input class="button-pseudo" type="submit" form="log-form">
+            <div class="form__body">
+               <div class="form__labels">
+                  <label class="form__label option">
+                     <input type="checkbox" class="form__input" name="body_type[skinny]">
+                     <span class="form__box"></span>
+                     Skinny
+                  </label>
+                  <label class="form__label option">
+                     <input type="checkbox" class="form__input" name="body_type[regular]">
+                     <span class="form__box"></span>
+                     Regular
+                  </label>
+                  <label class="form__label option">
+                     <input type="checkbox" class="form__input" name="body_type[bbw]">
+                     <span class="form__box"></span>
+                     B.B.W
+                  </label>
+                  <label class="form__label option">
+                     <input type="checkbox" class="form__input" name="body_type[sexy_ass]">
+                     <span class="form__box"></span>
+                     Sexy Ass
+                  </label>
+                  <label class="form__label option">
+                     <input type="checkbox" class="form__input" name="body_type[sexy_tits]">
+                     <span class="form__box"></span>
+                     Sexy Tits
+                  </label>
+               </div>
+               <label id="body_types_next" class="button">
+                  <input class="button-pseudo" type="button">
                   <span class="button-text">Next</span>
                </label>
-            </form>
+            </div>
          </div>
-         <div class="popup__footer">
-            <p>Free Registration ends in: <span>00:00</span></p>
+      </section>
+      <section class="color">
+         <div class="color__body">
+            <div class="title">
+               <h2 class="title__header">What hair color do you prefer?</h2>
+               <p class="title__text">
+                  (Please choose up to 3 answers)
+               </p>
+            </div>
+            <div class="color-form">
+               <div class="color-form__labels">
+                  <label class="color-form__label" for="hair_color[dark]">
+                     <input class="color-form__input" type="checkbox" name="hair_color[dark]">
+                     <div class="color-form__logo"><img src="./img/color-logo1.png" alt="Dark"></div>
+                     <span class="color-form__span">Dark</span>
+                  </label>
+                  <label class="color-form__label" for="hair_color[blond]">
+                     <input class="color-form__input" type="checkbox" name="hair_color[blond]">
+                     <div class="color-form__logo"><img src="./img/color-logo2.png" alt="Blond"></div>
+                     <span class="color-form__span">Blond</span>
+                  </label>
+                  <label class="color-form__label" for="hair_color[brown]">
+                     <input class="color-form__input" type="checkbox" name="hair_color[brown]">
+                     <div class="color-form__logo"><img src="./img/color-logo3.png" alt="Brown"></div>
+                     <span class="color-form__span">Brown</span>
+                  </label>
+               </div>
+               <label id="color_hair_next" class="button">
+                  <input class="button-pseudo" type="button" form="color">
+                  <span class="button-text">Next</span>
+               </label>
+            </div>
          </div>
-         <div class="popup__logo one">
-            <img src="./img/heart1.png" alt="Heart">
+      </section>
+      <section id="my-modal" class="popup">
+         <div class="popup__body">
+            <div class="popup__slaid">
+               <div class="popup__info">
+                  <div class="popup__arrow left"></div>
+                  <p class="popup__text">My sign in info</p>
+                  <div class="popup__arrow right"></div>
+               </div>
+               <div class="reg-form">
+                  <input class="reg-form__input" type="email" name="info[email]" placeholder="E-mail">
+                  <input class="reg-form__input" type="password" name="info[password]" placeholder="Password">
+                  <label class="reg-form__label option">
+                     <input type="checkbox" class="reg-form__check">
+                     <span class="reg-form__box"></span>
+                     <span class="reg-form__space"></span> By registering I agree I will receive information and
+                     promotions
+                     via email from the partners of this
+                     website.
+                  </label>
+                  <label class="button recede">
+                     <input class="button-pseudo" type="submit" form="customer-information">
+                     <span class="button-text">Next</span>
+                  </label>
+               </div>
+            </div>
+            <div class="popup__footer">
+               <p>Free Registration ends in: <span>00:00</span></p>
+            </div>
+            <div class="popup__logo one">
+               <img src="./img/heart1.png" alt="Heart">
+            </div>
+            <div class="popup__logo two">
+               <img src="./img/heart2.png" alt="Heart">
+            </div>
+            <div class="popup__logo three">
+               <img src="./img/heart3.png" alt="Heart">
+            </div>
+            <div class="popup__logo four">
+               <img src="./img/heart4.png" alt="Heart">
+            </div>
+            <div class="popup__logo five">
+               <img src="./img/heart5.png" alt="Heart">
+            </div>
          </div>
-         <div class="popup__logo two">
-            <img src="./img/heart2.png" alt="Heart">
-         </div>
-         <div class="popup__logo three">
-            <img src="./img/heart3.png" alt="Heart">
-         </div>
-         <div class="popup__logo four">
-            <img src="./img/heart4.png" alt="Heart">
-         </div>
-         <div class="popup__logo five">
-            <img src="./img/heart5.png" alt="Heart">
-         </div>
-      </div>
-   </section>
+      </section>
+   </form>
    <footer class="footer">
       <div class="footer__body">
          <p>Warning! <span>NOT</span> a Dating Site!</p>
       </div>
    </footer>
+   <script src="./jquery-3.5.0.js"></script>
+   <script src="./src/index.js"></script>
 </body>
-
 </html>
