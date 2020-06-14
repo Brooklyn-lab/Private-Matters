@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,6 +11,7 @@
    <link rel="stylesheet" href="./libs/bootstrap.min.css" />
    <link rel="stylesheet" href="./src/index.css" />
 </head>
+
 <body>
    <header class="header">
       <div class="header__body">
@@ -24,11 +26,10 @@
    <section class="start">
       <div class="start__body">
          <h1>We find <span>BAD GIRLS</span> in your area that <span>WANT TO FUCK</span></h1>
-         <label class="button" id="start">
-            <input class="button-pseudo">
+         <div class="button" id="start">
+            <input class="button-pseudo" type="button">
             <span class="button-text">Next</span>
-         </label>
-      </div>
+         </div>
    </section>
    <section class="attention">
       <div class="attention__body">
@@ -38,14 +39,14 @@
             neighbors or someone you know. Do you agree to keep the identity of these women a secret?
          </p>
          <div class="atention__choice">
-            <label class="button">
+            <div class="button">
                <input class="button-pseudo" id="no">
                <span class="button-text">No</span>
-            </label>
-            <label class="button" id="yes">
+            </div>
+            <div class="button" id="yes">
                <input class="button-pseudo">
                <span class="button-text">Yes</span>
-            </label>
+            </div>
          </div>
       </div>
    </section>
@@ -86,10 +87,10 @@
                      Sexy Tits
                   </label>
                </div>
-               <label id="body_types_next" class="button">
+               <div id="body_types_next" class="button">
                   <input class="button-pseudo" type="button">
                   <span class="button-text">Next</span>
-               </label>
+               </div>
             </div>
          </div>
       </section>
@@ -103,71 +104,71 @@
             </div>
             <div class="color-form">
                <div class="color-form__labels">
-                  <label class="color-form__label" for="hair_color[dark]">
+                  <label class="color-form__label">
                      <input class="color-form__input" type="checkbox" name="hair_color[dark]">
                      <div class="color-form__logo"><img src="./img/color-logo1.png" alt="Dark"></div>
                      <span class="color-form__span">Dark</span>
                   </label>
-                  <label class="color-form__label" for="hair_color[blond]">
+                  <label class="color-form__label">
                      <input class="color-form__input" type="checkbox" name="hair_color[blond]">
                      <div class="color-form__logo"><img src="./img/color-logo2.png" alt="Blond"></div>
                      <span class="color-form__span">Blond</span>
                   </label>
-                  <label class="color-form__label" for="hair_color[brown]">
+                  <label class="color-form__label">
                      <input class="color-form__input" type="checkbox" name="hair_color[brown]">
                      <div class="color-form__logo"><img src="./img/color-logo3.png" alt="Brown"></div>
                      <span class="color-form__span">Brown</span>
                   </label>
                </div>
-               <label id="color_hair_next" class="button">
+               <div id="color_hair_next" class="button">
                   <input class="button-pseudo" type="button" form="color">
                   <span class="button-text">Next</span>
-               </label>
+               </div>
             </div>
          </div>
-      </section>
-      <section id="my-modal" class="popup">
-         <div class="popup__body">
-            <div class="popup__slaid">
-               <div class="popup__info">
-                  <div class="popup__arrow left"></div>
-                  <p class="popup__text">My sign in info</p>
-                  <div class="popup__arrow right"></div>
+         <div id="my-modal">
+            <div class="popup__body">
+               <div class="popup__slaid">
+                  <div class="popup__info">
+                     <div class="popup__arrow left"></div>
+                     <p class="popup__text">My sign in info</p>
+                     <div class="popup__arrow right"></div>
+                  </div>
+                  <div class="reg-form">
+                     <input class="reg-form__input" type="email" name="info[email]" placeholder="E-mail">
+                     <input class="reg-form__input" type="password" name="info[password]" placeholder="Password">
+                     <label class="reg-form__label option">
+                        <input type="checkbox" class="reg-form__check">
+                        <span class="reg-form__box"></span>
+                        <span class="reg-form__space"></span> By registering I agree I will receive information and
+                        promotions
+                        via email from the partners of this
+                        website.
+                     </label>
+                     <div class="button recede">
+                        <input class="button-pseudo" type="submit" form="customer-information">
+                        <span class="button-text">Next</span>
+                     </div>
+                  </div>
                </div>
-               <div class="reg-form">
-                  <input class="reg-form__input" type="email" name="info[email]" placeholder="E-mail">
-                  <input class="reg-form__input" type="password" name="info[password]" placeholder="Password">
-                  <label class="reg-form__label option">
-                     <input type="checkbox" class="reg-form__check">
-                     <span class="reg-form__box"></span>
-                     <span class="reg-form__space"></span> By registering I agree I will receive information and
-                     promotions
-                     via email from the partners of this
-                     website.
-                  </label>
-                  <label class="button recede">
-                     <input class="button-pseudo" type="submit" form="customer-information">
-                     <span class="button-text">Next</span>
-                  </label>
+               <div class="popup__footer">
+                  <p>Free Registration ends in: <span>00:00</span></p>
                </div>
-            </div>
-            <div class="popup__footer">
-               <p>Free Registration ends in: <span>00:00</span></p>
-            </div>
-            <div class="popup__logo one">
-               <img src="./img/heart1.png" alt="Heart">
-            </div>
-            <div class="popup__logo two">
-               <img src="./img/heart2.png" alt="Heart">
-            </div>
-            <div class="popup__logo three">
-               <img src="./img/heart3.png" alt="Heart">
-            </div>
-            <div class="popup__logo four">
-               <img src="./img/heart4.png" alt="Heart">
-            </div>
-            <div class="popup__logo five">
-               <img src="./img/heart5.png" alt="Heart">
+               <div class="popup__logo one">
+                  <img src="./img/heart1.png" alt="Heart">
+               </div>
+               <div class="popup__logo two">
+                  <img src="./img/heart2.png" alt="Heart">
+               </div>
+               <div class="popup__logo three">
+                  <img src="./img/heart3.png" alt="Heart">
+               </div>
+               <div class="popup__logo four">
+                  <img src="./img/heart4.png" alt="Heart">
+               </div>
+               <div class="popup__logo five">
+                  <img src="./img/heart5.png" alt="Heart">
+               </div>
             </div>
          </div>
       </section>
@@ -177,7 +178,8 @@
          <p>Warning! <span>NOT</span> a Dating Site!</p>
       </div>
    </footer>
-   <script src="./jquery-3.5.0.js"></script>
-   <script src="./src/index.js"></script>
+   <script type="application/javascript" src="./jquery-3.5.0.js"></script>
+   <script type="application/javascript" src="./src/index.js"></script>
 </body>
+
 </html>

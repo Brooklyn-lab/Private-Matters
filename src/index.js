@@ -1,7 +1,3 @@
-jQuery('#start').click(function () {
-   console.log('*');
-});
-
 (function ($) {
 
    let errors = {
@@ -11,33 +7,35 @@ jQuery('#start').click(function () {
    let form = '#customer-information';
    let selectorBodyTypes = 'input[name^="body_type"]';
    let selectorHairColors = 'input[name^="hair_color"]';
-   let selectorStart = '#start';
-   let selectorStartPage = '.start';
-   let selectorAttentionPage = '.attention';
-   let selectorAgreementYes = '#yes';
-   let selectorAgreementNo = '#no';
-   let selectorTypePage = '.type';
+
    let selectorBodyTypesNext = '#body_types_next';
    let selectorColorHairNext = '#color_hair_next';
-   let modal = '#my-modal';
 
-   $('#body_types_next').click(function () {
-      console.log('*');
-   });
+   let selectorStartBlock = '.start';
+   let selectorAttentionBlock = '.attention';
+   let selectorBodyTypesBlock = '.type';
+   let selectorColorHairBlock = '.color';
+
+   let selectorColorBody = ".color__body";
+
+   let selectorAgreementYes = '#yes';
+   let selectorAgreementNo = '#no';
+   let modal = '#my-modal';
+   let selectorStart = '#start';
 
    $(selectorStart).on("click", function () {
-      $(selectorStartPage).hide();
-      $(selectorAttentionPage).show();
+      $(selectorStartBlock).hide();
+      $(selectorAttentionBlock).show();
    })
 
    $(selectorAgreementYes).on("click", function () {
-      $(selectorAttentionPage).hide();
-      $(selectorTypePage).show();
+      $(selectorAttentionBlock).hide();
+      $(selectorBodyTypesBlock).show();
    })
 
    $(selectorAgreementNo).on("click", function () {
-      $(selectorAttentionPage).hide();
-      $(selectorStartPage).show();
+      $(selectorBodyTypesBlock).hide();
+      $(selectorStartBlock).show();
    })
 
    function showMessage(text) {
@@ -66,38 +64,33 @@ jQuery('#start').click(function () {
    }
 
    $(selectorBodyTypesNext).on('click', function () {
-      console.log('1');
-      // if (false === validateBodyTypes()) {
-      //    console.log('2');
-      //    //show message in current section
-      //    return;
-      // }
-      // console.log(3);
+      if (false === validateBodyTypes()) {
+         showMessage(errors.bodyTypeLength);
+         return;
+      }
 
-
-      $(selectorBodyTypes).hide();
-      $(selectorColorHairNext).show();
+      $(selectorBodyTypesBlock).hide();
+      $(selectorColorHairBlock).show();
    });
 
    $(selectorColorHairNext).on('click', function () {
       if (false === validateBodyTypes()
          && false === validateHairColor()) {
-         //show message in current section
+         alert('*');
          return;
       }
-
-      $(selectorColorHairNext).hide();
+      $(selectorColorBody).hide();
       $(modal).show();
    });
 
 
    $(form).on('submit', function (e) {
-      console.log('312312');
       e.preventDefault();
       if (false === validateForm()) {
          return;
       }
 
+      console.log('valid');
       //@todo
    });
 
