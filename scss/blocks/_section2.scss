@@ -1,52 +1,53 @@
-.attention {
+.warning-page {
    background: url(/img/bg2.png) no-repeat center/cover;
    width: 100%;
    height: 100vh;
    display: none;
-   .attention__body {
+
+   &__body {
       @include body;
-      .attention__title {
-         @include title;
-         @media screen and (max-width: 576px) {
-            font-size: 22px;
-         }
+   }
+
+   &__title {
+      @include title;
+      @media screen and (max-width: 576px) {
+         font-size: 22px;
       }
-      .attention__text {
-         max-width: 555px;
-         width: 100%;
-         font-size: 20px;
-         color: #fff;
-         line-height: 1.5;
-         text-align: left;
-         padding: 0 20px;
-         margin-bottom: 0;
-      }
-      .atention__choice {
-         display: flex;
-         .button {
-            @include btn;
-            padding: 15px 115px;
-            margin-top: 40px;
-         }
-      }
+   }
+
+   &__text {
+      max-width: 555px;
+      width: 100%;
+      font-size: 20px;
+      color: #fff;
+      line-height: 1.5;
+      text-align: left;
+      padding: 0 20px;
+      margin-bottom: 0;
+   }
+}
+.buttons-choice {
+   display: flex;
+   .button {
+      @include btn;
+      padding: 15px 115px;
+      margin-top: 40px;
    }
 }
 
 @media screen and (max-width: 576px) {
-   .attention {
-      .attention__body {
-         .attention__text {
-            text-align: center;
-            font-size: 18px;
-         }
-         .atention__choice {
-            flex-wrap: wrap;
-            .button {
-               margin: 35px auto 0;
-               &:last-child {
-                  margin-top: 15px;
-               }
-            }
+   .warning-page {
+      &__text {
+         text-align: center;
+         font-size: 18px;
+      }
+   }
+   .buttons-choice {
+      flex-wrap: wrap;
+      .button {
+         margin: 35px auto 0;
+         &:last-child {
+            margin-top: 15px;
          }
       }
    }

@@ -1,8 +1,13 @@
-.start {
+.start-page {
    background: url(/img/bg1.png) no-repeat center/cover;
    width: 100%;
    height: 100vh;
-   .start__body {
+
+   @media screen and (max-width: 768px) {
+      background-position: 15% 50%;
+   }
+
+   &__body {
       @include body;
       h1 {
          font-size: 36px;
@@ -10,32 +15,27 @@
          line-height: 1.333;
          letter-spacing: 0.1ex;
          padding: 0 20px;
+         margin-bottom: 70px;
          span {
             color: #fff7b2;
             text-transform: uppercase;
          }
       }
-      .button {
-         @include btn;
-         max-width: 375px;
-         margin-top: 70px;
-      }
    }
 }
-@media screen and (max-width: 768px) {
-   .start {
-      background-position: 15% 50%;
-   }
+.button {
+   @include btn;
+   max-width: 375px;
 }
+
 @media screen and (max-width: 576px) {
-   .start {
+   .start-page {
       background-position: 25% 50%;
-      .start__body {
+
+      &__body {
          h1 {
             font-size: 24px;
-         }
-         .button {
-            margin-top: 30px;
+            margin-bottom: 30px;
          }
       }
    }

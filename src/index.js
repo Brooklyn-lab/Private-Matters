@@ -1,9 +1,11 @@
 (function ($) {
 
    let errors = {
-      bodyTypeLength: "Please, select more than 3 body types to complete.",
+      bodyColorHairLength: "Please select at least 1 body type to complete.",
+      bodyTypeLength: "Please select from 1 to 3 body types to complete.",
       harColorsNotSelected: "Please select color hair",
    };
+   
    let form = '#customer-information';
    let selectorBodyTypes = 'input[name^="body_type"]';
    let selectorHairColors = 'input[name^="hair_color"]';
@@ -11,17 +13,17 @@
    let selectorBodyTypesNext = '#body_types_next';
    let selectorColorHairNext = '#color_hair_next';
 
-   let selectorStartBlock = '.start';
-   let selectorAttentionBlock = '.attention';
-   let selectorBodyTypesBlock = '.type';
-   let selectorColorHairBlock = '.color';
+   let selectorStartBlock = '.start-page';
+   let selectorAttentionBlock = '.warning-page';
+   let selectorBodyTypesBlock = '.body_type-page';
+   let selectorColorHairBlock = '.color_type-page';
 
-   let selectorColorBody = ".color__body";
+   let selectorColorBody = ".color_type-page__body";
 
-   let selectorAgreementYes = '#yes';
-   let selectorAgreementNo = '#no';
+   let selectorAgreementYes = '#button_yes';
+   let selectorAgreementNo = '#button_no';
    let modal = '#my-modal';
-   let selectorStart = '#start';
+   let selectorStart = '#button_start';
 
    $(selectorStart).on("click", function () {
       $(selectorStartBlock).hide();
@@ -43,7 +45,9 @@
    }
 
    function validateBodyTypes() {
-      return $(selectorBodyTypes + ':checked').length > 2
+      let bodyTypesLength = $(selectorBodyTypes + ':checked').length;
+
+      return bodyTypesLength <= 3 ? bodyTypesLength > 0 : false;
    }
 
    function validateHairColor() {
@@ -75,23 +79,25 @@
 
    $(selectorColorHairNext).on('click', function () {
       if (false === validateBodyTypes()
-         && false === validateHairColor()) {
-         alert('*');
+         || false === validateHairColor()) {
+
          return;
       }
+
       $(selectorColorBody).hide();
       $(modal).show();
    });
 
+   // -----------Submit form----------------
 
-   $(form).on('submit', function (e) {
-      e.preventDefault();
-      if (false === validateForm()) {
-         return;
-      }
+   // $(form).on('submit', function (e) {
+   //    e.preventDefault();
+   //    if (false === validateForm()) {
+   //       return;
+   //    }
 
-      console.log('valid');
-      //@todo
-   });
+   //    console.log('valid');
+   //    // @todo
+   // });
 
 })(jQuery);

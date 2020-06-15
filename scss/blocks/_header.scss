@@ -2,7 +2,8 @@
   background: transparent;
   justify-content: center;
   display: flex;
-  .header__body {
+
+  &__body {
     max-width: 1140px;
     width: 100%;
     position: fixed;
@@ -11,22 +12,23 @@
     align-items: center;
     padding: 30px 15px;
     margin: 0 auto;
-    .header__btn {
-      a {
-        font-style: none;
-        font-size: 25px;
-        color: #fff;
-        position: relative;
-        &::after {
-          content: "";
-          position: absolute;
-          width: 110%;
-          height: 2px;
-          bottom: -35%;
-          right: -4px;
-          background: #fcfcfc;
-          pointer-events: none;
-        }
+  }
+
+  &__btn {
+    a {
+      font-style: none;
+      font-size: 25px;
+      color: #fff;
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        width: 110%;
+        height: 2px;
+        bottom: -35%;
+        right: -4px;
+        background: #fcfcfc;
+        pointer-events: none;
       }
     }
   }
@@ -34,20 +36,23 @@
 
 @media screen and (max-width: 576px) {
   .header {
-    .header__body {
+    &__body {
       padding: 15px;
-      .header__logo {
-        img {
-          max-width: 100px;
-          width: 100%;
-          height: auto;
-        }
+    }
+  
+    &__logo {
+      img {
+        max-width: 100px;
+        width: 100%;
+        height: auto;
       }
-      .header__btn {
-        a {
-          font-size: 20px;
-        }
+    }
+  
+    &__btn {
+      a {
+        font-size: 20px;
       }
     }
   }
+  
 }
