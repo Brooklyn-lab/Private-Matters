@@ -5,8 +5,8 @@
       bodyTypeLength: "Please select from 1 to 3 body types to complete.",
    };
 
-   let selectorBodyTypes = $('input[name^="body_type"]');
-   let selectorHairColors = $('input[name^="hair_color"]');
+   let selectorBodyTypes = 'input[name^="body_type"]';
+   let selectorHairColors = 'input[name^="hair_color"]';
 
    let selectorBodyTypesNext = $("#body_types_next");
    let selectorColorHairNext = $("#color_hair_next");
