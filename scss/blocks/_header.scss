@@ -12,13 +12,27 @@
     align-items: center;
     padding: 30px 15px;
     margin: 0 auto;
+
+    @media screen and (max-width: 576px) {
+      padding: 15px;
+    }
+  }
+
+  &__logo {
+    img {
+      @media screen and (max-width: 576px) {
+        max-width: 100px;
+        width: 100%;
+        height: auto;
+      }
+    }
   }
 
   &__btn {
     a {
-      font-style: none;
-      font-size: 25px;
+      @include adaptive-font(25, 20);
       color: #fff;
+      font-style: none;
       position: relative;
       &::after {
         content: "";
@@ -32,27 +46,4 @@
       }
     }
   }
-}
-
-@media screen and (max-width: 576px) {
-  .header {
-    &__body {
-      padding: 15px;
-    }
-  
-    &__logo {
-      img {
-        max-width: 100px;
-        width: 100%;
-        height: auto;
-      }
-    }
-  
-    &__btn {
-      a {
-        font-size: 20px;
-      }
-    }
-  }
-  
 }

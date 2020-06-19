@@ -1,7 +1,14 @@
-.start-page {
+.startPage {
    background: url("../img/bg1.png") no-repeat center/cover;
-   width: 100%;
+   display: flex;
    min-height: 100vh;
+   width: 100%;
+   padding: 0 15px;
+   display: none;
+
+   @media screen and (max-width: 576px) {
+      background-position: 25% 50%;
+   }
 
    @media screen and (max-width: 768px) {
       background-position: 15% 50%;
@@ -9,34 +16,96 @@
 
    &__body {
       @include body;
-      h1 {
-         font-size: 36px;
-         color: #fff;
-         line-height: 1.333;
-         letter-spacing: 0.1ex;
-         padding: 0 20px;
-         margin-bottom: 70px;
-         span {
-            color: #fff7b2;
-            text-transform: uppercase;
-         }
+   }
+   &__title {
+      width: 100%;
+      max-width: 700px;
+      display: flex;
+      justify-content: center;
+      margin: 0 auto;
+   }
+   &__text {
+      @include adaptive-font(36, 24);
+      margin: 0 0 70px 0;
+      line-height: 48px;
+
+      @media screen and (max-width: 576px) {
+         line-height: 35px;
+         margin-bottom: 32px;
+      }
+
+      @media screen and (max-width: 768px) {
+         margin-bottom: 32px;
+      }
+
+      span {
+         color: #fff7b2;
+         text-transform: uppercase;
       }
    }
 }
 .button {
-   @include btn;
-   max-width: 375px;
-}
+   max-width: 285px;
+   width: 100%;
+   display: inline-block;
+   line-height: 68px;
+   padding: 0;
+   background: transparent;
+   border: 1px solid #fff;
+   box-shadow: 0 24px 16px 1px rgba(0, 0, 0, 0.4);
+   border-radius: 35px;
+   align-self: center;
+   cursor: pointer;
+   user-select: none;
+   position: relative;
+   overflow: hidden;
+   transition: 0.3s ease-in-out;
+   &:hover {
+      border: 1px solid #ff567d;
+   }
+   &:before {
+      content: "";
+      display: block;
+      background: linear-gradient(to right, #ff295b 0%, #ff7e9c 100%);
+      position: absolute;
+      width: 200%;
+      height: 500%;
+      @include box_shadow(1);
+      border-radius: 100%;
+      transition: 0.36s cubic-bezier(0.4, 0, 1, 1);
+   }
+   &:before {
+      transform: translate(30%, 10%) translateZ(0);
+   }
+   &:hover::before {
+      transform: translate(-45%, -34%) translateZ(0);
+   }
 
-@media screen and (max-width: 576px) {
-   .start-page {
-      background-position: 25% 50%;
-
-      &__body {
-         h1 {
-            font-size: 24px;
-            margin-bottom: 30px;
-         }
+   span {
+      @include adaptive-font(30, 20);
+      letter-spacing: 1.5px;
+      position: relative;
+      top: 0;
+      display: inline;
+      transition: 0.25s ease-in;
+      transition-delay: 0.1s;
+      span {
+         text-transform: uppercase;
       }
    }
+
+   @media screen and (max-width: 576px) {
+      line-height: 55px;
+   }
+
+   &__input {
+      display: none;
+   }
+}
+.start {
+   max-width: 350px;
+   margin: 0 15px;
+}
+.active {
+   display: flex;
 }

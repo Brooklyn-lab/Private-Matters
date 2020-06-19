@@ -1,4 +1,3 @@
-
 (function ($) {
    let errors = {
       bodyColorHairLength: "Please select at least 1 body type to complete.",
@@ -8,34 +7,34 @@
    let selectorBodyTypes = 'input[name^="body_type"]';
    let selectorHairColors = 'input[name^="hair_color"]';
 
-   let selectorBodyTypesNext = $("#body_types_next");
-   let selectorColorHairNext = $("#color_hair_next");
+   let selectorStartBlock = $(".startPage");
+   let selectorAttentionBlock = $(".warningPage");
+   let selectorBodyTypesBlock = $(".bodyTypePage");
+   let selectorColorHairBlock = $(".colorTypePage");
 
-   let selectorStartBlock = $(".start-page");
-   let selectorAttentionBlock = $(".warning-page");
-   let selectorBodyTypesBlock = $(".body_type-page");
-   let selectorColorHairBlock = $(".color_type-page");
+   let selectorStart = $("#buttonStart");
+   let selectorAgreementYes = $("#buttonYes");
+   let selectorAgreementNo = $("#buttonNo");
+   let selectorBodyTypesNext = $("#bodyTypesNext");
+   let selectorColorHairNext = $("#colorHairNext");
 
-   let selectorColorBody = $(".color_type-page__body");
-
-   let selectorAgreementYes = $("#button_yes");
-   let selectorAgreementNo = $("#button_no");
+   let selectorColorBody = $(".colorTypePage__body");
    let modal = $("#my-modal");
-   let selectorStart = $("#button_start");
+
 
    $(selectorStart).on("click", function () {
-      selectorStartBlock.hide();
-      selectorAttentionBlock.show();
+      selectorStartBlock.removeClass("active");
+      selectorAttentionBlock.addClass("active");
    });
 
    $(selectorAgreementYes).on("click", function () {
-      selectorAttentionBlock.hide();
-      selectorBodyTypesBlock.show();
+      selectorAttentionBlock.removeClass("active");
+      selectorBodyTypesBlock.addClass("active");
    });
 
    $(selectorAgreementNo).on("click", function () {
-      selectorBodyTypesBlock.hide();
-      selectorStartBlock.show();
+      selectorAttentionBlock.removeClass("active");
+      selectorStartBlock.addClass("active");
    });
 
    function showMessage(text) {
@@ -56,17 +55,18 @@
          return;
       }
 
-      selectorBodyTypesBlock.hide();
-      selectorColorHairBlock.show();
+      selectorBodyTypesBlock.removeClass("active");
+      selectorColorHairBlock.addClass("active");
    });
 
    $(selectorColorHairNext).on("click", function () {
       if (!validateBodyTypes() || !validateHairColor()) {
+         showMessage(errors.bodyColorHairLength);
          return;
       }
 
       selectorColorBody.hide();
-      modal.show();
+      modal.addClass("active");
    });
 
 })(jQuery);

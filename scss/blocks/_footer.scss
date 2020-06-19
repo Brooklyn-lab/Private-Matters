@@ -14,13 +14,9 @@
       display: flex;
       justify-content: center;
       p {
-         color: #fff;
-         font-size: 18px;
+         @include adaptive-font(18, 14);
          margin-bottom: 0;
          font-weight: 100;
-         @media screen and (max-width: 576px) {
-            font-size: 14px;
-         }
          span {
             text-transform: uppercase;
          }

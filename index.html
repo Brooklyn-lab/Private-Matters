@@ -23,39 +23,38 @@
          </div>
       </div>
    </header>
-   <section class="start-page">
-      <div class="start-page__body">
-         <h1>We find <span>BAD GIRLS</span> in your area that <span>WANT TO FUCK</span></h1>
-         <div class="button" id="button_start">
-            <input class="button-pseudo" type="button">
-            <span class="button-text">Next</span>
+   <section class="startPage active">
+      <div class="startPage__body">
+         <div class="startPage__title">
+            <h1 class="startPage__text">We find <span>BAD GIRLS</span> in your area that <span>WANT TO FUCK</span></h1>
          </div>
+         <label class="button start" id="buttonStart" for="btnStart"><span>Start <span>now</span></span></label>
+         <button class="button__input" type="button" id="btnStart"></button>
+      </div>
    </section>
-   <section class="warning-page">
-      <div class="warning-page__body">
-         <h2 class="warning-page__title">Attention!</h2>
-         <p class="warning-page__text">
-            Many of these women are desperate single moms and cheating wives looking for some fun. They could be your
-            neighbors or someone you know. Do you agree to keep the identity of these women a secret?
-         </p>
-         <div class="buttons-choice">
-            <div class="button" id="button_no">
-               <input class="button-pseudo">
-               <span class="button-text">No</span>
-            </div>
-            <div class="button" id="button_yes">
-               <input class="button-pseudo">
-               <span class="button-text">Yes</span>
-            </div>
+   <section class="warningPage">
+      <div class="warningPage__body">
+         <div class="warningPage__header">
+            <h2 class="warningPage__title">Attention!</h2>
+            <p class="warningPage__text">
+               Many of these women are desperate single moms and cheating wives looking for some fun. They could be your
+               neighbors or someone you know. Do you agree to keep the identity of these women a secret?
+            </p>
+         </div>
+         <div class="buttonsChoice">
+            <label class="button choice" id="buttonNo" for="btnNo"><span>No</span></label>
+            <button class="button__input" type="button" id="btnNo"></button>
+            <label class="button choice" id="buttonYes" for="btnYes"><span>Yes</span></label>
+            <button class="button__input" type="button" id="btnYes"></button>
          </div>
       </div>
    </section>
    <form id="customer-information">
-      <section class="body_type-page">
-         <div class="body_type-page__body">
-            <div class="title">
-               <h2 class="title__header">What type of body turns you on?</h2>
-               <p class="title__text">
+      <section class="bodyTypePage">
+         <div class="bodyTypePage__body">
+            <div class="contentBody">
+               <h2 class="contentBody__title">What type of body turns you on?</h2>
+               <p class="contentBody__text">
                   (Please choose up to 3 answers)
                </p>
             </div>
@@ -87,43 +86,39 @@
                      Sexy Tits
                   </label>
                </div>
-               <div id="body_types_next" class="button">
-                  <input class="button-pseudo" type="button">
-                  <span class="button-text">Next</span>
-               </div>
+               <label class="button bodyType" id="bodyTypesNext" for="btnBodyType"><span>Next</span></label>
+               <button class="button__input" type="button" id="btnBodyType"></button>
             </div>
          </div>
       </section>
-      <section class="color_type-page">
-         <div class="color_type-page__body">
-            <div class="title">
-               <h2 class="title__header">What hair color do you prefer?</h2>
-               <p class="title__text">
+      <section class="colorTypePage">
+         <div class="colorTypePage__body">
+            <div class="contentBody">
+               <h2 class="contentBody__title">What hair color do you prefer?</h2>
+               <p class="contentBody__text">
                   (Please choose up to 3 answers)
                </p>
             </div>
-            <div class="color-form">
-               <div class="color-form__labels">
-                  <label class="color-form__label">
-                     <input class="color-form__input" type="checkbox" name="hair_color[dark]">
-                     <div class="color-form__logo"><img src="./img/color-logo1.png" alt="Dark"></div>
-                     <span class="color-form__span">Dark</span>
+            <div class="colorForm">
+               <div class="colorForm__labels">
+                  <label class="colorForm__label">
+                     <input class="colorForm__input" type="checkbox" name="hair_color[dark]">
+                     <span class="colorForm__logo"><img src="./img/color-logo1.png" alt="Dark"></span>
+                     <span class="colorForm__span">Dark</span>
                   </label>
-                  <label class="color-form__label">
-                     <input class="color-form__input" type="checkbox" name="hair_color[blond]">
-                     <div class="color-form__logo"><img src="./img/color-logo2.png" alt="Blond"></div>
-                     <span class="color-form__span">Blond</span>
+                  <label class="colorForm__label">
+                     <input class="colorForm__input" type="checkbox" name="hair_color[blond]">
+                     <span class="colorForm__logo"><img src="./img/color-logo2.png" alt="Blond"></span>
+                     <span class="colorForm__span">Blond</span>
                   </label>
-                  <label class="color-form__label">
-                     <input class="color-form__input" type="checkbox" name="hair_color[brown]">
-                     <div class="color-form__logo"><img src="./img/color-logo3.png" alt="Brown"></div>
-                     <span class="color-form__span">Brown</span>
+                  <label class="colorForm__label">
+                     <input class="colorForm__input" type="checkbox" name="hair_color[brown]">
+                     <span class="colorForm__logo"><img src="./img/color-logo3.png" alt="Brown"></span>
+                     <span class="colorForm__span">Brown</span>
                   </label>
                </div>
-               <div id="color_hair_next" class="button">
-                  <input class="button-pseudo" type="button" form="color">
-                  <span class="button-text">Next</span>
-               </div>
+               <label class="button ColorType" id="colorHairNext" for="btnColorType"><span>Next</span></label>
+               <button class="button__input" type="button" id="btnColorType"></button>
             </div>
          </div>
          <div class="popup" id="my-modal">
@@ -145,10 +140,8 @@
                         via email from the partners of this
                         website.
                      </label>
-                     <div class="button recede">
-                        <input class="button-pseudo" type="submit" form="customer-information">
-                        <span class="button-text">Next</span>
-                     </div>
+                     <label class="button recede" for="popupBtn"><span>Next</span></label>
+                     <button class="button__input" type="button" id="popupBtn"></button>
                   </div>
                </div>
                <div class="popup__footer">
@@ -178,8 +171,8 @@
          <p>Warning! <span>NOT</span> a Dating Site!</p>
       </div>
    </footer>
-   <script type="application/javascript" src="./jquery-3.5.0.js"></script>
-   <script type="application/javascript" src="./src/index.js"></script>
+   <script src="./jquery-3.5.0.js"></script>
+   <script src="./src/index.js"></script>
 </body>
 
 </html>

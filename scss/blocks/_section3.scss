@@ -1,17 +1,36 @@
-.body_type-page {
-   background: url("../img/bg3.png") no-repeat center/cover;
-   width: 100%;
+.bodyTypePage {
+   background: linear-gradient(180deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.7) 100%),
+      url("../img/bg3.png") no-repeat center/cover;
+   display: flex;
    min-height: 100vh;
+   width: 100%;
+   padding: 0 15px;
    display: none;
+
    &__body {
       @include body;
    }
 }
+.contentBody {
+   margin: 0 auto;
 
+   &__title {
+      @include adaptive-font(30, 20);
+      color: #fff7b2;
+      margin-bottom: 15px;
+      padding: 0px 26px;
+   }
+
+   &__text {
+      @include adaptive-font(16, 15);
+      font-style: italic;
+   }
+}
 .form {
    &__body {
       max-width: 430px;
       width: 100%;
+      margin: 0 auto;
    }
 
    &__labels {
@@ -21,6 +40,7 @@
       margin: 25px 0 55px;
       vertical-align: middle;
       user-select: none;
+
       @media screen and (max-width: 576px) {
          margin: 15px 20px 35px;
       }
@@ -28,11 +48,8 @@
 
    &__label {
       padding-left: 45px;
-      font-size: 20px;
+      @include adaptive-font(20, 18);
       margin-bottom: 0;
-      @media screen and (max-width: 576px) {
-         font-size: 18px;
-      }
    }
 
    &__input {
@@ -50,6 +67,7 @@
       margin-left: -45px;
       border: 1px solid #fff;
       border-radius: 5px;
+
       @media screen and (max-width: 576px) {
          width: 25px;
          height: 25px;
@@ -63,12 +81,11 @@
 .option {
    display: block;
    margin-top: 20px;
+
    @media screen and (max-width: 576px) {
       margin-top: 15px;
    }
 }
-.button {
-   @include btn;
-   padding: 15px 110px;
-   margin: 0 auto;
+.active {
+   display: flex;
 }
